@@ -1,10 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavigationMenu from './components/NavigationMenu/NavigationMenu';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import ProjectPage from './pages/ProjectPage';
 
-export default function App() {
+function App() {
   return (
-    <>
-      <h1>Welcome to react portfolio Project</h1>
-      <h3>Ivan Livshits</h3>
-    </>
+    <div>
+      <Router>
+        <NavigationMenu />
+        <Switch>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/projects">
+            <ProjectPage />
+          </Route>
+          <Route path="/contacts">
+            <ContactPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
+
+export default App;
