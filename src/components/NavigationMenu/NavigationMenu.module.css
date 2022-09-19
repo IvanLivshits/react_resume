@@ -45,7 +45,7 @@ li:hover {
     top: 1rem;
     width: 4rem;
     cursor: pointer;
-    display: block;
+    display: none;
     outline: none;
 }
 
@@ -55,7 +55,7 @@ li:hover {
 
 @media screen and (max-width: 768px) { 
     .mobileMenuIcon {
-        display: none;
+        display: block;
     } 
     .ul {
         transition: .3s ease transform;
